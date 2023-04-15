@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="GPU Debug|x64">
+      <Configuration>GPU Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\include\Dragonfly\detail\config.cpp" />
+    <ClCompile Include="..\include\Dragonfly\detail\Events\Camera.cpp" />
+    <ClCompile Include="..\include\Dragonfly\detail\Events\renderdoc_load_api.cpp" />
+    <ClCompile Include="..\include\Dragonfly\detail\Events\Sample.cpp" />
+    <ClCompile Include="..\include\Dragonfly\detail\File\File.cpp" />
+    <ClCompile Include="..\include\Dragonfly\detail\File\FileEditor.cpp" />
+    <ClCompile Include="..\include\Dragonfly\detail\Program\Program.cpp" />
+    <ClCompile Include="..\include\Dragonfly\detail\Shader\Shader.cpp" />
+    <ClCompile Include="..\include\Dragonfly\detail\Shader\ShaderEditor.cpp" />
+    <ClCompile Include="..\include\Dragonfly\detail\Texture\Texture.cpp" />
+    <ClCompile Include="..\include\Dragonfly\detail\Traits\InternalFormats.cpp" />
+    <ClCompile Include="..\include\Dragonfly\detail\Traits\UniformTypes.cpp" />
+    <ClCompile Include="..\include\Dragonfly\detail\Uniform\Subroutines.cpp" />
+    <ClCompile Include="..\include\Dragonfly\detail\Uniform\Uniform.cpp" />
+    <ClCompile Include="..\include\Dragonfly\detail\Uniform\UniformEditor.cpp" />
+    <ClCompile Include="..\include\ImGui-addons\auto\auto.cpp" />
+    <ClCompile Include="..\include\ImGui-addons\cpp\imgui_stdlib.cpp" />
+    <ClCompile Include="..\include\ImGui-addons\imgui_node_editor\Source\crude_json.cpp" />
+    <ClCompile Include="..\include\ImGui-addons\imgui_node_editor\Source\imgui_canvas.cpp" />
+    <ClCompile Include="..\include\ImGui-addons\imgui_node_editor\Source\imgui_node_editor.cpp" />
+    <ClCompile Include="..\include\ImGui-addons\imgui_node_editor\Source\imgui_node_editor_api.cpp" />
+    <ClCompile Include="..\include\ImGui-addons\imgui_text_editor\TextEditor.cpp" />
+    <ClCompile Include="..\include\ImGui-addons\impl\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="..\include\ImGui-addons\impl\imgui_impl_sdl.cpp" />
+    <ClCompile Include="$(ProjectDir)..\DragonflyPack\includes\ImGui\imgui.cpp" />
+    <ClCompile Include="$(ProjectDir)..\DragonflyPack\includes\ImGui\imgui_demo.cpp" />
+    <ClCompile Include="$(ProjectDir)..\DragonflyPack\includes\ImGui\imgui_draw.cpp" />
+    <ClCompile Include="$(ProjectDir)..\DragonflyPack\includes\ImGui\imgui_widgets.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\Dragonfly\config.h" />
+    <ClInclude Include="..\include\Dragonfly\core.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\buffer.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\Events\Camera.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\Events\ImGuiHandler.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\Events\renderdoc_app.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\Events\renderdoc_load_api.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\Events\Sample.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\File\File.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\File\FileEditor.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\Framebuffer\Framebuffer.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\Framebuffer\FramebufferBase.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\object.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\Program\Program.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\Program\ProgramBase.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\Program\ProgramEditor.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\Program\ProgramFwd.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\Renderbuffer\Renderbuffer.hpp" />
+    <ClInclude Include="..\include\Dragonfly\detail\Shader\Shader.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\Shader\ShaderEditor.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\Shader\ShaderFwd.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\Texture\Texture.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\Texture\Texture1D.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\Texture\Texture2D.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\Texture\Texture2DArray.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\Texture\Texture3D.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\Texture\TextureCube.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\Traits\EventHandlerTraits.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\Traits\InternalFormats.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\Traits\UniformTypes.hpp" />
+    <ClInclude Include="..\include\Dragonfly\detail\Uniform\Subroutines.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\Uniform\Uniform.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\Uniform\UniformEditor.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\vao.h" />
+    <ClInclude Include="..\include\Dragonfly\detail\Vao\Vao.h" />
+    <ClInclude Include="..\include\Dragonfly\editor.h" />
+    <ClInclude Include="..\include\Dragonfly\Vao.h" />
+    <ClInclude Include="..\include\ImGui-addons\auto\auto.h" />
+    <ClInclude Include="..\include\ImGui-addons\auto\core.h" />
+    <ClInclude Include="..\include\ImGui-addons\auto\impl_base.h" />
+    <ClInclude Include="..\include\ImGui-addons\auto\impl_glm.h" />
+    <ClInclude Include="..\include\ImGui-addons\cpp\imgui_stdlib.h" />
+    <ClInclude Include="..\include\ImGui-addons\imgui_node_editor\imgui_node_editor.h" />
+    <ClInclude Include="..\include\ImGui-addons\imgui_node_editor\Source\crude_json.h" />
+    <ClInclude Include="..\include\ImGui-addons\imgui_node_editor\Source\imgui_bezier_math.h" />
+    <ClInclude Include="..\include\ImGui-addons\imgui_node_editor\Source\imgui_canvas.h" />
+    <ClInclude Include="..\include\ImGui-addons\imgui_node_editor\Source\imgui_extra_math.h" />
+    <ClInclude Include="..\include\ImGui-addons\imgui_node_editor\Source\imgui_node_editor_internal.h" />
+    <ClInclude Include="..\include\ImGui-addons\imgui_text_editor\TextEditor.h" />
+    <ClInclude Include="..\include\ImGui-addons\impl\imgui_impl_opengl3.h" />
+    <ClInclude Include="..\include\ImGui-addons\impl\imgui_impl_sdl.h" />
+    <ClInclude Include="$(ProjectDir)..\DragonflyPack\includes\ImGui\imconfig.h" />
+    <ClInclude Include="$(ProjectDir)..\DragonflyPack\includes\ImGui\imgui.h" />
+    <ClInclude Include="$(ProjectDir)..\DragonflyPack\includes\ImGui\imgui_internal.h" />
+    <ClInclude Include="$(ProjectDir)..\DragonflyPack\includes\ImGui\imstb_rectpack.h" />
+    <ClInclude Include="$(ProjectDir)..\DragonflyPack\includes\ImGui\imstb_textedit.h" />
+    <ClInclude Include="$(ProjectDir)..\DragonflyPack\includes\ImGui\imstb_truetype.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\include\Dragonfly\detail\Events\Sample.inl" />
+    <None Include="..\include\Dragonfly\detail\Framebuffer\Framebuffer.inl" />
+    <None Include="..\include\Dragonfly\detail\Program\Program.inl" />
+    <None Include="..\include\Dragonfly\detail\Program\ProgramCompile.inl" />
+    <None Include="..\include\Dragonfly\detail\Shader\Shader.inl" />
+    <None Include="..\include\Dragonfly\detail\Uniform\Subroutines.inl" />
+    <None Include="..\include\Dragonfly\detail\Uniform\Uniform.inl" />
+    <None Include="..\include\ImGui-addons\imgui_node_editor\Source\imgui_bezier_math.inl" />
+    <None Include="..\include\ImGui-addons\imgui_node_editor\Source\imgui_extra_math.inl" />
+    <None Include="..\include\ImGui-addons\imgui_node_editor\Source\imgui_node_editor_internal.inl" />
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{C90AA1F9-4336-4907-BE3C-A997E73D9BDC}</ProjectGuid>
+    <RootNamespace>Framework</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <VCToolsVersion>14.30.30705</VCToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GPU Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <VCToolsVersion>14.30.30705</VCToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <VCToolsVersion>14.30.30705</VCToolsVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='GPU Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(ProjectDir)..\include;$(ProjectDir)..\DragonflyPack\includes;$(IncludePath)</IncludePath>
+    <OutDir>$(ProjectDir)..\lib\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GPU Debug|x64'">
+    <IncludePath>$(ProjectDir)..\include;$(ProjectDir)..\DragonflyPack\includes;$(IncludePath)</IncludePath>
+    <OutDir>$(ProjectDir)..\lib\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(ProjectDir)..\include;$(ProjectDir)..\DragonflyPack\includes;$(IncludePath)</IncludePath>
+    <OutDir>$(ProjectDir)..\lib\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PreprocessorDefinitions>GPU_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <Lib />
+    <Lib />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='GPU Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PreprocessorDefinitions>GPU_DEBUG;_DEBUG;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <Lib />
+    <Lib />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib />
+    <Lib />
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
