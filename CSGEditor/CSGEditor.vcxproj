@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="GPU Debug|x64">
+      <Configuration>GPU Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{C3036A30-B921-4DBD-82EE-6DD83C198CB6}</ProjectGuid>
+    <RootNamespace>Runtime</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <ProjectName>CSGEditor</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <EnableASAN>false</EnableASAN>
+    <VCToolsVersion>14.30.30705</VCToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GPU Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <VCToolsVersion>14.30.30705</VCToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <VCToolsVersion>14.30.30705</VCToolsVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="Dragonfly.props" />
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='GPU Debug|x64'" Label="PropertySheets">
+    <Import Project="Dragonfly.props" />
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="Dragonfly.props" />
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LocalDebuggerEnvironment>PATH=$(SolutionDir)Dragonfly\DragonflyPack\LibBin;$(RenderdocPath);%PATH%</LocalDebuggerEnvironment>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GPU Debug|x64'">
+    <LocalDebuggerEnvironment>PATH=$(SolutionDir)Dragonfly\DragonflyPack\LibBin;$(RenderdocPath);%PATH%</LocalDebuggerEnvironment>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LocalDebuggerEnvironment>PATH=$(SolutionDir)Dragonfly\DragonflyPack\LibBin;$(RenderdocPath);%PATH%</LocalDebuggerEnvironment>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LibraryPath>$(SolutionDir)nativefiledialog\build\lib\Debug\x64;$(SolutionDir)Dragonfly\DragonflyPack\LibBin;$(SolutionDir)Dragonfly\lib\$(Configuration)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)nativefiledialog\src\include;$(SolutionDir)Libraries\include;$(SolutionDir)Dragonfly\DragonflyPack\includes;$(SolutionDir)Dragonfly\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GPU Debug|x64'">
+    <LibraryPath>$(SolutionDir)nativefiledialog\build\lib\Debug\x64;$(SolutionDir)Dragonfly\DragonflyPack\LibBin;$(SolutionDir)Dragonfly\lib\$(Configuration)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)nativefiledialog\src\include;$(SolutionDir)Libraries\include;$(SolutionDir)Dragonfly\DragonflyPack\includes;$(SolutionDir)Dragonfly\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LibraryPath>$(SolutionDir)nativefiledialog\build\lib\Release\x64;$(SolutionDir)Dragonfly\DragonflyPack\LibBin;$(SolutionDir)Dragonfly\lib\$(Configuration)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)Libraries\include;$(SolutionDir)nativefiledialog\src\include;$(SolutionDir)Dragonfly\DragonflyPack\includes;$(SolutionDir)Dragonfly\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>_AMD64_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>assimp-vc140-mt.lib;Framework.lib;SDL2.lib;SDL2main.lib;glew32.lib;opengl32.lib;SDL2_image.lib;nfd_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='GPU Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>GPU_DEBUG;_AMD64_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>assimp-vc140-mt.lib;Framework.lib;SDL2.lib;SDL2main.lib;glew32.lib;opengl32.lib;SDL2_image.lib;nfd_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>_AMD64_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>assimp-vc140-mt.lib;Framework.lib;SDL2.lib;SDL2main.lib;glew32.lib;opengl32.lib;SDL2_image.lib;nfd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="app.cpp" />
+    <ClCompile Include="DifferentiatedSDFGenerator.cpp" />
+    <ClCompile Include="exceptions.cpp" />
+    <ClCompile Include="GuiNode.cpp" />
+    <ClCompile Include="GuiOperatorNode.cpp" />
+    <ClCompile Include="GuiPrimitiveNode.cpp" />
+    <ClCompile Include="IdManager.cpp" />
+    <ClCompile Include="NodeJsonSerializer.cpp" />
+    <ClCompile Include="LayoutCalculatorVisitor.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="SDFGenerator.cpp" />
+    <ClCompile Include="Node.cpp" />
+    <ClCompile Include="CircleCheck.cpp" />
+    <ClCompile Include="Editor.cpp" />
+    <ClCompile Include="NodeVisitor.cpp" />
+    <ClCompile Include="Operator.cpp" />
+    <ClCompile Include="Persistence.cpp" />
+    <ClCompile Include="Primitive.cpp" />
+    <ClCompile Include="ShaderLibManager.cpp" />
+    <ClCompile Include="utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="app.h" />
+    <ClInclude Include="DifferentiatedSDFGenerator.h" />
+    <ClInclude Include="exceptions.h" />
+    <ClInclude Include="forward_declarations.h" />
+    <ClInclude Include="GuiNode.h" />
+    <ClInclude Include="GuiOperatorNode.h" />
+    <ClInclude Include="GuiPrimitiveNode.h" />
+    <ClInclude Include="IdManager.h" />
+    <ClInclude Include="NodeJsonSerializer.h" />
+    <ClInclude Include="LayoutCalculatorVisitor.h" />
+    <ClInclude Include="lib\json.hpp" />
+    <ClInclude Include="SDFGenerator.h" />
+    <ClInclude Include="Node.h" />
+    <ClInclude Include="CircleCheck.h" />
+    <ClInclude Include="Editor.h" />
+    <ClInclude Include="NodeVisitor.h" />
+    <ClInclude Include="Operator.h" />
+    <ClInclude Include="Persistence.h" />
+    <ClInclude Include="Primitive.h" />
+    <ClInclude Include="ShaderLibManager.h" />
+    <ClInclude Include="utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\trace.frag" />
+    <None Include="Shaders\gizmo.frag" />
+    <None Include="Shaders\number.frag" />
+    <None Include="Shaders\primitives.frag" />
+    <None Include="Shaders\trace.vert" />
+    <None Include="Shaders\gizmo.vert" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

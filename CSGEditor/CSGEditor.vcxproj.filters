@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{617e88ef-0742-4465-bee2-e5ed134fb95d}</UniqueIdentifier>
+      <Extensions>h;hpp</Extensions>
+    </Filter>
+    <Filter Include="Sources">
+      <UniqueIdentifier>{3f63ac22-bd6d-4c9d-ba3e-1d27e5beb3aa}</UniqueIdentifier>
+      <Extensions>cpp</Extensions>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{edc112e6-8015-48c8-bca2-1fbfeea07971}</UniqueIdentifier>
+      <Extensions>frag;vert</Extensions>
+    </Filter>
+    <Filter Include="Libraries">
+      <UniqueIdentifier>{685fedd1-eac3-49f2-810a-c106cd42bc1f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="app.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="GuiNode.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="IdManager.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Node.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="utils.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="NodeVisitor.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CircleCheck.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="SDFGenerator.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="GuiOperatorNode.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="GuiPrimitiveNode.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="LayoutCalculatorVisitor.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Persistence.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Primitive.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="DifferentiatedSDFGenerator.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Operator.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="NodeJsonSerializer.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="exceptions.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderLibManager.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="app.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="GuiNode.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="IdManager.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="NodeVisitor.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="CircleCheck.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SDFGenerator.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="GuiOperatorNode.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="GuiPrimitiveNode.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="LayoutCalculatorVisitor.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\json.hpp">
+      <Filter>Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Persistence.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Primitive.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="DifferentiatedSDFGenerator.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Operator.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="NodeJsonSerializer.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="exceptions.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="forward_declarations.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderLibManager.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\trace.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\trace.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\primitives.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\gizmo.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\gizmo.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\number.frag">
+      <Filter>Shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>
