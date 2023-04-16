@@ -48,5 +48,10 @@ Vizualizálási módokból az alábbiak érhetőek el:
   <img src="images/head_mean.png" width="15%" />
 </p>
 
+## 3D megjelenítő
+- Mozgás: WASD
+- Kamera forgatása: bal egérgomb + egér mozgatás
+- Fényforrás iránya legyen a kamera iránya: space
+
 ## Dokumentáció
 A TDK dolgozat anyagából később szakdolgozatot is készítettem, mely a kód fejlesztői és felhasználó dokumentációját is tartalmazza. Ez a dokumentáció elérhető [itt](docs.pdf).
