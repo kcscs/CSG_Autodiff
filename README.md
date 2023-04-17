@@ -3,13 +3,13 @@ CSG Gráf alapú modellezőprogram, távolságfüggvények és deriváltjaik gen
 A deriváltak kiszámítása GPU-n történik, automatikus differenciálással. Az ehhez szükséges shader kódot a program generálja, alapesetben minden változtatást követően.
 
 ## Fordítás
-Visual Studio-val különösebb beállítások nélkül. Ismert probléma lehet, hogy a felhasznált Dragonfly könyvtár nem fordul egyes MSVC verziókkal. Egy biztosan működő MSVC verzió: **14.30.30705**
+Visual Studio-val különösebb beállítások nélkül. Ismert probléma, hogy a felhasznált Dragonfly könyvtár nem fordul egyes MSVC verziókkal. Egy biztosan működő MSVC verzió: **14.30.30705**
 
 ## Rövid használati útmutató
 A program alapvetően két ablakból áll, egy gráfszerkesztőből (editor) és egy kirajzolóból (renderer).
-A szerkesztőben üres területve jobbklikkelve lehet új csúcsokat létrehozni. Ezek összekötésével és tulajdonságaik állításával hozható létre a modellt leíró CSG gráf.
+A szerkesztőben üres területre jobbklikkelve lehet új csúcsokat létrehozni. Ezek összekötésével és tulajdonságaik állításával hozható létre a modellt leíró CSG gráf.
 
-Alapesetben a program minden módosítást követően újragenerálja a megjelenítéshez használt távolságfüggvényt, így a másik ablakban nyomon követhetőek a változtatások. Ha aa shader fordítás túl lassú lenne, ez a funkció a szerkesztő ablak "Auto compile" opciójával kikapcsolható.
+Alapesetben a program minden módosítást követően újragenerálja a megjelenítéshez használt távolságfüggvényt, így a másik ablakban nyomon követhetőek a változtatások. Ha a shader fordítás túl lassú lenne, ez a funkció a szerkesztő ablak "Auto compile" opciójával kikapcsolható.
 
 A megejelenített részfa gyökerét lila háttérszín jelzi, valamint egy sárga pötty a jobb felső sarokban. Más csúcsokon ugyanide kattintva kiválasztható a megjelenítendő részfa gyökere.
 
@@ -20,7 +20,7 @@ A megejelenített részfa gyökerét lila háttérszín jelzi, valamint egy sár
 
 ### Automatikus differenciálás
 
-A szerkesztő ablak menüsávjában a "Derivatives" menüpont segítségével bekapcsolható, hogy a távolságfüggvény deriváltjait automatikus differenciálással előállító shader kód generálva legyen-e, illetve hanyadrendű derviáltakat legyen képes meghatározni. A teljesítményre és a shaderfordítás sebességére ez az opció van a legnagyobb hatással.
+A szerkesztő ablak menüsávjában a "Derivatives" menüpont segítségével bekapcsolható, hogy a távolságfüggvény deriváltjait automatikus differenciálással előállító shader kód generálva legyen-e, illetve hanyadrendű deriváltakat legyen képes meghatározni. A teljesítményre és a shaderfordítás sebességére ez az opció van a legnagyobb hatással.
 
 ### Megjelenítési lehetőségek
 
