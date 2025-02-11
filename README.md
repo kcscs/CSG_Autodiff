@@ -1,3 +1,82 @@
+# CSG graph editor with the automatic differentiation of the SDF
+This is a CSG[^1] graph editor that generates signed distance functions (SDFs) for the created surfaces. It also generates shader code for performing automatic differentation of the SDF on the GPU.
+
+## Building the editor
+Open the provided solution file with Visual Studio. Building the project does not require any extra settings, other than having the C++ module of VS installed. There is a known problem that the included [Dragonfly](https://github.com/ELTE-IK-CG/Dragonfly) library does not compile with some MSVC versions. A tested working MSVC version:  **14.30.30705**
+
+## Short user guide
+The program opens in two windows (and a debug console), a graph editor and a renderer for displaying the surface represented by the graph.
+New nodes can be added by opening the context menu of the editor by right clicking an empty spot. The CSG graph can be constructed by connecting these nodes with the mouse and editing their settings.
+
+By default the SDF used for rendering will be regenerated after each change, so their effect can be observed in the other window in real-time. For more complex scenes shader compilation may become slow, in that case turn off autocompilation by unticking the "Auto compile" checkbox in the editor.
+
+The root of the currently rendered subtree is displayed with a purple node background and a yellow spot in its top right corner. The displayed subtree can be changed by clicking the top right corner of the desired root node. 
+
+<p float="left">
+  <img src="images/editor.png" height="300px" />
+  <img src="images/renderer.png" height="300px" /> 
+</p>
+
+### Automatic differentiation
+
+This can be turned on under the "Derivatives" option in the editor. If enabled, the generated shader code will include a dual SDF for performing automatic differentiation. In case it is disabled, the required derivatives can be approximated with symmetric finite differences. There is an option for selecting the order of differentiation, all partial derivatives will be computed up to the selected order. This is the setting that affects performance the most. In theory the program is capable of generating derivatives of arbitrary order, but in practice the generated shaders become so complex that third order and above is infeasible due to the driver refusing compilation.
+
+### Visualization options
+
+These settings are accessible in the editor under the option with the same name.
+One may select rendering to be completely real-time or only occur when there is either a change of the graph or the camera.
+
+You may also select the epsilon for approximating derivatives with finite differences whenever automatic differentiation is disabled.
+
+If the generated shader includes a dual SDF, you can select whether to use automatic differentiation or finite differences for the derivatives.
+
+The following visualization modes are available:
+- Phong shading
+- Coloring by normals
+- Stepcount of sphere tracing
+- Difference of gradients (normals) calculated by automatic differentiation and finite differences.
+- Gaussian curvature
+- Mean curvature
+
+<p float="left">
+  <img src="images/head.png" width="15%" />
+  <img src="images/head_norm.png" width="15%" />
+  <img src="images/head_steps500.png" width="15%" />
+  <img src="images/head_norm_err.png" width="15%" />
+  <img src="images/head_gaussian.png" width="15%" />
+  <img src="images/head_mean.png" width="15%" />
+</p>
+
+## 3D renderer
+- Movement: WASD
+- Camera rotation: left mouse button + mouse movement
+- Change light direction to the viewing direction: space
+
+## Documentation (hungarian only)
+My thesis contains the user and developer documentation of the software as well as my TDK[^2] paper containing measurement results and mathematical explanations. It is available [here](docs.pdf).
+
+[^1]: **C**onstructive **S**olid **G**eometry
+[^2]: "**T**udományos **D**iákköri **K**onferencia" is a hungarian national conference and competition for student researchers.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # CSG gráfszerkesztő, távolságfüggvény automatikus differenciálásával
 CSG Gráf alapú modellezőprogram, távolságfüggvények és deriváltjaik generálására. 
 A deriváltak kiszámítása GPU-n történik, automatikus differenciálással. Az ehhez szükséges shader kódot a program generálja, alapesetben minden változtatást követően.
