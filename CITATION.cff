@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+authors:
+  - family-names: Karikó
+    given-names: Csongor Csanád
+    orcid: https://orcid.org/0009-0000-6666-9960
+title: "Generating and automatically differentiating signed distance functions from a CSG graph"
+version: 1.0
+date-released: 2022
